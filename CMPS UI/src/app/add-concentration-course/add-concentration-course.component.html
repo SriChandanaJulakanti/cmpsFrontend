@@ -1,0 +1,49 @@
+<div class="form-container">
+    <h2>Add New Concentration or Course</h2>
+
+    <div class="radio-group">
+        <label>
+            <input type="radio" name="choice" (click)="toggleForm('concentration')"> Add Concentration
+        </label>
+        <label>
+            <input type="radio" name="choice" (click)="toggleForm('course')"> Add Course
+        </label>
+    </div>
+
+    <div *ngIf="showConcentrationForm" class="form-section">
+        <h3>Add Concentration</h3>
+        <input type="text" [(ngModel)]="concentrationName" placeholder="Enter Concentration Name">
+        <button (click)="submitConcentration()">Submit Concentration</button>
+
+        <div *ngIf="concentrationAlertMessage" class="salert success-alert" role="alert">
+            {{ concentrationAlertMessage }}
+        </div>
+    </div>
+
+ 
+
+    <div *ngIf="showCourseForm" class="form-section">
+        <h3>Add Course</h3>
+        <label for="courseIdInput">Course ID:</label>
+        <input type="text" id="courseIdInput" [(ngModel)]="courseId" placeholder="Enter Course ID">
+
+        <label for="courseNameInput">Course Name:</label>
+        <input type="text" id="courseNameInput" [(ngModel)]="courseName" placeholder="Enter Course Name">
+
+        <label for="concentrationSelect">Select Concentration:</label>
+        <select id="concentrationSelect" [(ngModel)]="selectedConcentration">
+            <option *ngFor="let key of keys(concentrations)" [value]="key">
+                {{ concentrations[key] }}
+            </option>
+        </select>
+
+        <label for="hoursInput">Hours:</label>
+        <input type="number" id="hoursInput" [(ngModel)]="courseHours" placeholder="Enter Course Hours">
+
+        <button (click)="submitCourse()">Submit Course</button>
+
+        <div *ngIf="alertMessage" class="alert success-alert" role="alert">
+            {{ alertMessage }}
+          </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="bodyo">
+  <div class="card" style="margin: 20px;">
+    <div class="card-body">
+      <div class="container-fluid">
+          <form>
+              <div class="form-group">
+                <label for="excelUpload">Upload Excel File</label>
+                <input type="file" class="form-control" id="excelUpload" (change)="onFileSelected($event)" accept=".xls,.xlsx">
+              </div>
+              <div class="button-container">
+                <button type="button" class="btn-upload" (click)="upload()">Upload</button> <!-- Changed type to button to prevent form submission -->
+              </div>
+              <!-- Progress and Message Display -->
+              <div *ngIf="progress" class="progress-bar">
+                <div class="progress-bar-inner" [style.width]="progress + '%'">
+                  Progress: {{progress}}%
+                </div>
+              </div>
+              <div *ngIf="message" class="message">
+                <i class="fa fa-exclamation-circle" aria-hidden="true"></i> <!-- Icon for added emphasis -->
+                {{ message }}
+              </div>
+              
+          </form>
+          <!-- Download Link -->
+          <div class="download-template-link">
+              <a href="assets/Sample_Template.xlsx" download="SampleTemplate.xlsx">Download Sample Template</a>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

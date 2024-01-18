@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  /* Form Container */
+  .form-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  h2, h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Radio Button Styles */
+  .radio-group {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .radio-group label {
+    margin: 0 10px;
+    font-size: 16px;
+    color: #7f8c8d;
+  }
+  
+  /* Input and Select Styles */
+  input[type="text"], select {
+    width: 100%;
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  
+  input[type="text"]:focus, select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+    outline: none;
+  }
+  
+  /* Button Styles */
+  button {
+    width: auto; /* Adjust to content size */
+    padding: 6px 12px; /* Smaller padding for a compact button */
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 13px; /* Smaller font size for button text */
+    margin: 0 auto; /* Center the button */
+    display: block;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Form Sections */
+  .form-section {
+    margin-top: 20px;
+    background-color: #f9f9f9; /* Light background for sections */
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Hide/Show Forms */
+  .hidden {
+    display: none;
+  }
+  /* Add this to your CSS stylesheet */
+
+
+  .success-alert {
+    background-color: rgb(163, 185, 163); /* Green background color */
+    color: #0b0b0b; /* White text color */
+    padding: 10px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center-align the text */
+    font-size: 16px; /* Font size */
+    margin-top: 10px; /* Add margin to separate from other elements */
+    border: none; /* Remove the border */
+  }
